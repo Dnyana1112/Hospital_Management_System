@@ -1,0 +1,90 @@
+
+
+  body {
+    background: linear-gradient(165deg, #1265b7, #075fb1); 
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+
+
+  .navbar {
+    background-color: palegoldenrod;
+    background-image: url('/25.jpg');
+    padding: 0.8rem 2rem;
+  }
+  .navbar .nav-link:hover {
+    background-color: green;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  .navbar .navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+  }
+
+
+  h2, h3 {
+    color: #343a40;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  marquee {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .tableFixHead { 
+    overflow-y: auto; 
+    height: 400px; 
+    display: block;
+  }
+  .tableFixHead thead th {
+    position: sticky;
+    top: 0;
+    background-color: #007bff;
+    color: white;
+    z-index: 1;
+  }
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #e9f7ef;
+  }
+  .table-striped tbody tr:hover {
+    background-color: #d1e7dd;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+
+  .btn-info, .btn-success, .btn-danger {
+    border-radius: 8px;
+    padding: 5px 12px;
+    transition: 0.3s;
+  }
+  .btn-info:hover {
+    background-color: #0069d9;
+    color: white;
+  }
+  .btn-success:hover {
+    background-color: #218838;
+    color: white;
+  }
+  .btn-danger:hover {
+    background-color: #c82333;
+    color: white;
+  }
+
+
+  .container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }

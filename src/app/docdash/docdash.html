@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-lg bg-dark" style="margin: auto;">
+  <a class="navbar-brand text-white" style="color: aqua;">Doctar Dashboard</a>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+      <li class="nav-item">
+        <a class="nav-link text-white active" routerLink="/create-patient" href="create-patient"> Add Patient</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link text-white active" href="/medicinelist"> View Medicines</a>
+      </li>
+
+      <li class="nav-item">
+        <a style="color:aliceblue" class="nav-link text-white active"   (click)="logout()" class="btn btn-danger"> Logout</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <hr />
+  <h2 style="text-align: center; margin-top: 20px;">Doctor Dashboard</h2>
+
+  <marquee behavior="scroll" direction="left" style="color: rgb(86, 86, 86); font-size: x-large;">
+    Welcome to Doctor Dashboard. Please find the patient list below!! 
+  </marquee>
+
+  <hr />
+
+  <h3 style="color: rgb(86, 86, 86); font-size: 25px;text-align:center;">
+    Current Patient List in the Queue
+  </h3>
+
+  <div class="tableFixHead">
+    <br />
+
+<table class="table table-striped">
+
+
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Blood Group</th>   
+        <th>Urgency</th>
+        <th>Action</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+
+@for (patient of patients; track patient.id) {
+    <tr>
+        <td>{{ patient.id }}</td>
+        <td>{{ patient.name }}</td>
+        <td>{{ patient.age }}</td>
+        <td>{{ patient.blood }}</td>
+        <td>{{ patient.urgency }}</td>
+        <td>
+                    <button (click)="Update(patient.id)" class="btn btn-info">Update</button>
+                    <button (click)="deletePatient(patient.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                    <button (click)="view(patient.id)" class="btn btn-success" style="margin-left: 10px;">View</button>
+
+        </td>
+    </tr>
+}
+</tbody>
+</table>
