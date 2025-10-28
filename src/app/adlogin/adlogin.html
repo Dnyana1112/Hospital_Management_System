@@ -1,0 +1,94 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(90deg, #007bff, #28a745); padding: 0.8rem 2rem;">
+  <a class="navbar-brand fw-bold" style="letter-spacing: 1px;">DNYANESHWAR HOSPITALS</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <li class="nav-item mx-2">
+        <a class="nav-link text-white active px-3 py-2 rounded" routerLink="/home">Home</a>
+      </li>
+      <li class="nav-item mx-2">
+        <a class="nav-link text-white px-3 py-2 rounded" routerLink="/doclogin">Doctor Login</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+
+
+<div class="login-page d-flex align-items-center justify-content-center vh-100">
+  <div class="login-card shadow-lg p-4 rounded">
+    <h3 class="text-center text-primary mb-4">
+      <i class="bi bi-person-badge"></i> Admin Login
+    </h3>
+
+    <form (ngSubmit)="checkLogin()">
+      <div class="form-group mb-3">
+        <label class="form-label">Username</label>
+        <input type="text" class="form-control" [(ngModel)]="username" name="username" placeholder="Enter username-Aadu" required>
+      </div>
+
+      <div class="form-group mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" [(ngModel)]="password" name="password" placeholder="Enter password-admin123" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100 mt-2">Login</button>
+    </form>
+  </div>
+</div>
+
+<style>
+  .login-page {
+    background-color: aqua;
+    background-image: url('/19.webp');
+    background-size: cover;
+   
+  }
+
+  .login-card {
+    background: #950b0b;
+    background-image: url('/20.webp');
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    padding: 30px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .login-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  h3 {
+    font-weight: 600;
+    color: #333;
+  }
+
+  .form-control {
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+  }
+
+  .btn-primary {
+    border-radius: 10px;
+    font-weight: 500;
+    padding: 10px;
+  }
+
+  .navbar-nav .nav-link:hover {
+     background-image: url('/18.jpg');
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+  }
+</style>

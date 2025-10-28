@@ -1,0 +1,123 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-gradient" style="background: linear-gradient(90deg, #007bff, #28a745); padding: 0.8rem 2rem;">
+  <a class="navbar-brand fw-bold text-white" style="letter-spacing: 1px;">DNYANESHWAR HOSPITALS</a>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <li class="nav-item mx-2">
+        <a class="nav-link text-white active px-3 py-2 rounded" routerLink="/home" style="transition: 0.3s;">
+          Home
+        </a>
+      </li>
+
+      <li class="nav-item mx-2">
+        <a class="nav-link text-white px-3 py-2 rounded" routerLink="/adlogin" style="transition: 0.3s;">
+          Admin Login
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .navbar-nav .nav-link:hover {
+    background-image: url('/18.jpg');
+    background-color: rgba(171, 9, 9, 0.2);
+    transition: 0.3s;
+  }
+</style>
+
+
+<div class="login-page d-flex align-items-center justify-content-center vh-100">
+  <div class="login-card shadow-lg p-4 rounded">
+    <h3 class="text-center text-primary mb-4">
+      <i class="bi bi-person-badge"></i> Doctor Login
+    </h3>
+
+    <form (ngSubmit)="checkLogin()">
+      <div class="form-group mb-3">
+        <label class="form-label">Username</label>
+        <input 
+          type="text"  class="form-control"  [(ngModel)]="username"  name="username"  placeholder="Enter username-Dnyana" 
+          required>
+      </div>
+
+      <div class="form-group mb-3">
+        <label class="form-label">Password</label><input 
+          type="password"  class="form-control"   [(ngModel)]="password"  name="password"  placeholder="Enter password-doctor123" 
+          required>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100 mt-2" >Login</button>
+
+      <div *ngIf="errorMessage" class="alert alert-danger mt-3 text-center">
+        {{ errorMessage }}
+      </div>
+    </form>
+
+<style>
+
+  .login-page {
+    background-image: url('/15.jpg');
+    background-color: rosybrown ;
+  }
+
+
+  .login-card {
+     background-image: url('/11.png');
+     background-size: cover;
+     background-color:wheat; 
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    padding: 30px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .login-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+
+  h3 {
+    font-weight: 600;
+    color: #333;
+  }
+
+
+  .form-control {
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+  }
+
+  .btn-primary {
+    border-radius: 10px;
+    font-weight: 500;
+    padding: 10px;
+  }
+
+  .alert {
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+
+  a {
+    color: #6f42c1;
+    font-weight: 500;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
